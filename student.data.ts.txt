@@ -1,0 +1,13 @@
+export class Student {
+    public firstName : string;
+    public lastName : string;
+    public age : number;
+    public teacher : string;
+     
+     constructor(firstName : string,lastName : string,age : number,teacher : string){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.teacher = teacher;
+    }
+}

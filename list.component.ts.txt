@@ -1,0 +1,25 @@
+import {Component} from '@angular/core';
+import {Student} from './student.data';
+
+
+@Component({
+  selector: 'list-component',
+  templateUrl: 'app/list.component.html',
+})
+export class ListComponent {
+    students: Array<Student>;
+    constructor(){
+        this.students = [];
+    }
+
+    addStudent(firstName : string,lastName : string,age : number,teacher : string){
+        let student = new Student(firstName,lastName,age,teacher);
+        this.students.push(student);
+        
+    }
+
+    removeStudent(student : Student){
+        let index = this.students.indexOf(student);
+        this.students.splice(index,1);
+    }
+ }
